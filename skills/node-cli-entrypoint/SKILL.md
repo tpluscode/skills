@@ -67,4 +67,4 @@ Use an isolated consumer project or existing CLI integration tests. Check observ
 - Arguments containing spaces, empty strings, or shell metacharacters arrive unchanged. Nonzero exit codes propagate, and a long-running command receives termination signals.
 - A packed installation includes the executable wrapper and built entrypoint. Run the installed command from its intended working directory; test unrelated directories if global use is supported.
 
-Use a controlled `PATH` for branch tests so global tools cannot accidentally select a loader. Stub Node only to inspect arguments and runtime selection; verify real loader imports separately. If tests use arrange/act/assert sections, separate them with blank lines and `// Given`, `// When`, `// Then` comments.
+Use a controlled `PATH` for branch tests so global tools cannot accidentally select a loader. Stub Node only to inspect arguments and runtime selection; verify real loader imports separately. 
