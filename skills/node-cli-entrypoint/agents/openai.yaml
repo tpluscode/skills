@@ -1,0 +1,4 @@
+interface:
+  display_name: "Node CLI Entrypoint"
+  short_description: "Bootstrap Node CLIs with optional TypeScript loaders"
+  default_prompt: "Use $node-cli-entrypoint to bootstrap a CLI with a shell entrypoint and optional TypeScript loaders."
