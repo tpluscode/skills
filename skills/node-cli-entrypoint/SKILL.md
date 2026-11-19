@@ -48,6 +48,8 @@ Include all runtime files, not just this example's paths. Preserve CommonJS pack
 
 Keep loaders optional unless the user requests a mandatory dependency. The `ts-node` branch transpiles without type checking; use a separate type-check command when needed.
 
+Use `node --import tsx/esm` when the CLI loads all supported TypeScript configs and plugins through ESM, such as with dynamic `import()`. Keep the template's `node --import tsx` default when the CLI or any supported plugin can load TypeScript through `require()`. [tsx preload options](https://tsx.hirok.io/dev-api/node-cli)
+
 ## Check resolution assumptions
 
 The template deliberately preserves `command -v` loader detection. An executable on `PATH` does **not** guarantee Node can import that module. Validate imports in the intended consumer environment; when needed, adapt detection to probe Node's actual module resolution. Do not retry the application with another runtime after it starts and fails, because it may already have performed side effects.
