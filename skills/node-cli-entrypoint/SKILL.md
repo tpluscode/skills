@@ -38,6 +38,8 @@ Wire the manifest, adapting this fragment rather than replacing existing fields:
 
 Include all runtime files, not just this example's paths. Preserve CommonJS packages' module format and use `require()` in their JavaScript entrypoint. Do not add a compiler or build hook to projects that ship JavaScript directly.
 
+Never install `tsx` or `ts-node` as production dependency.
+
 ## Preserve launcher behavior
 
 - Resolve the JavaScript entrypoint before choosing a loader. Stop with a useful error if resolution fails; never launch Node with an empty script path.
